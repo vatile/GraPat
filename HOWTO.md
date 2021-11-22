@@ -20,11 +20,14 @@ Eventually set the JDK to be used system-wide:
 
 #### Tomcat 7
 `sudo apt-get install tomcat7 tomcat7-admin`
+`sudo apt-get install tomcat9 tomcat9-admin`
 
 Set the proper `JAVA_HOME` in /etc/default/tomcat7
+Set the proper `JAVA_HOME` in /etc/default/tomcat9
 
 Start the tomcat server:
 `sudo service tomcat7 start`
+`sudo service tomcat9 start`
 
 
 
@@ -33,6 +36,7 @@ Install GraPAT
 
 Clone the repository:
 `git clone git@github.com:discourse-lab/GraPat.git`
+`git clone https://github.com/vatile/GraPat.git`
 
 Change into the GraPat directory:
 `cd GraPat`
@@ -42,6 +46,7 @@ Build the project:
 
 Deploy the project by (manually) copying the webapp into the Tomcat webapp directory:
 `sudo cp target/grapat.war /var/lib/tomcat7/webapps`
+`sudo cp target/grapat.war /var/lib/tomcat9/webapps`
 
 
 
@@ -64,6 +69,11 @@ Create a grapat user for authentification with mysql:
 CREATE USER grapat_user_auth;
 SET PASSWORD FOR 'grapat_user_auth'@'localhost' = PASSWORD('supersecret');
 GRANT ALL PRIVILEGES ON grapat.* TO 'grapat_user_auth'@'localhost' WITH GRANT OPTION;
+```
+```
+CREATE USER grapat_user_auth;
+SET PASSWORD FOR 'grapat_user_auth'@'%' = 'supersecret';
+GRANT ALL PRIVILEGES ON grapat.* TO 'grapat_user_auth'@'%' WITH GRANT OPTION;
 ```
 
 Create the database:

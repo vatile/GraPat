@@ -20,7 +20,7 @@ Eventually set the JDK to be used system-wide:
 
 #### Tomcat 7
 `sudo apt-get install tomcat7 tomcat7-admin`
-`sudo apt-get install tomcat9 tomcat9-admin`
+`sudo brew install tomcat9 tomcat9-admin`
 
 Set the proper `JAVA_HOME` in /etc/default/tomcat7
 Set the proper `JAVA_HOME` in /etc/default/tomcat9
@@ -53,7 +53,7 @@ Deploy the project by (manually) copying the webapp into the Tomcat webapp direc
 Setup MYSQL server
 ------------------
 
-`sudo apt-get install mysql-server`
+`sudo brew install mysql-server`
 
 Login to your mysql server:
 `mysql -u root -p`

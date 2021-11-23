@@ -11,6 +11,8 @@ This howto has been written for Ubuntu Linux machines. You will need Java 1.7 JD
 
 #### Java 1.7 JDK
 `sudo apt-get install java-7-openjdk-amd64`
+`sudo apt-get install default-jdk`
+
 
 Eventually set the JDK to be used system-wide:
 `sudo update-java-alternatives -s java-7-openjdk-amd64`
@@ -20,7 +22,7 @@ Eventually set the JDK to be used system-wide:
 
 #### Tomcat 7
 `sudo apt-get install tomcat7 tomcat7-admin`
-`sudo brew install tomcat9 tomcat9-admin`
+`sudo apt-get install tomcat9 tomcat9-admin`
 
 Set the proper `JAVA_HOME` in /etc/default/tomcat7
 Set the proper `JAVA_HOME` in /etc/default/tomcat9

@@ -73,9 +73,9 @@ SET PASSWORD FOR 'grapat_user_auth'@'localhost' = PASSWORD('supersecret');
 GRANT ALL PRIVILEGES ON grapat.* TO 'grapat_user_auth'@'localhost' WITH GRANT OPTION;
 ```
 ```
-CREATE USER grapat_user_auth;
-SET PASSWORD FOR 'grapat_user_auth'@'%' = 'supersecret';
-GRANT ALL PRIVILEGES ON grapat.* TO 'grapat_user_auth'@'%' WITH GRANT OPTION;
+CREATE USER grapat_user_auth@localhost;
+SET PASSWORD FOR 'grapat_user_auth'@'localhost' = 'supersecret';
+GRANT ALL PRIVILEGES ON grapat.* TO 'grapat_user_auth'@'localhost' WITH GRANT OPTION;
 ```
 
 Create the database:
